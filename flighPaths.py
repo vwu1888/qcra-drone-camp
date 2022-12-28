@@ -3,7 +3,8 @@ from easytello import tello
 myDrone = tello.Tello()
 
 
-def squarePath():
+def squarePath(speed=1):
+    myDrone.set_speed = speed
     myDrone.takeoff()
 
     for _ in range(4):
@@ -13,7 +14,8 @@ def squarePath():
     myDrone.land()
 
 
-def circlePath():
+def circlePath(speed=1):
+    myDrone.set_speed = speed
     myDrone.takeoff()
 
     for _ in range(3):
@@ -23,6 +25,6 @@ def circlePath():
     myDrone.land()
 
 
-def combineSquareCircle():
-    squarePath()
-    circlePath()
+def combineSquareCircle(speed=1):
+    squarePath(speed=speed)
+    circlePath(speed=speed)
