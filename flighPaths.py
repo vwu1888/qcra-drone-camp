@@ -1,28 +1,28 @@
 from easytello import tello
 
-myDrone = tello.Tello()
+drone = tello.Tello()
 
 
 def squarePath(speed=1):
-    myDrone.set_speed = speed
-    myDrone.takeoff()
+    drone.set_speed = speed
+    drone.takeoff()
 
     for _ in range(4):
-        myDrone.forward(100)
-        myDrone.cw(90)
+        drone.forward(100)
+        drone.cw(90)
 
-    myDrone.land()
+    drone.land()
 
 
 def circlePath(speed=1):
-    myDrone.set_speed = speed
-    myDrone.takeoff()
+    drone.set_speed = speed
+    drone.takeoff()
 
     for _ in range(3):
-        myDrone.forward(100)
-        myDrone.cw(120)
+        drone.forward(100)
+        drone.cw(120)
 
-    myDrone.land()
+    drone.land()
 
 
 def combineSquareCircle(speed=1):
